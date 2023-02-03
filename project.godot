@@ -12,7 +12,7 @@ _global_script_classes=[ {
 "base": "KinematicBody2D",
 "class": "Lazer",
 "language": "GDScript",
-"path": "res://Sceans/lazer.gd"
+"path": "res://Scripts/lazer.gd"
 } ]
 _global_script_class_icons={
 "Lazer": ""
@@ -23,6 +23,11 @@ _global_script_class_icons={
 config/name="Micro Mission"
 run/main_scene="res://Sceans/Level.tscn"
 config/icon="res://icon.png"
+
+[display]
+
+window/size/width=1920
+window/size/height=1080
 
 [global]
 
