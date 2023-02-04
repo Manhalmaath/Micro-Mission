@@ -9,7 +9,7 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "KinematicBody2D",
+"base": "Node2D",
 "class": "Lazer",
 "language": "GDScript",
 "path": "res://Scripts/lazer.gd"
@@ -26,8 +26,8 @@ config/icon="res://icon.png"
 
 [display]
 
-window/size/width=1920
-window/size/height=1080
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
 
 [global]
 
@@ -36,6 +36,13 @@ mouse=false
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true
+
+[importer_defaults]
+
+mp3={
+"loop": true,
+"loop_offset": 0
+}
 
 [input]
 

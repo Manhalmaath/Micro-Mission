@@ -1,18 +1,20 @@
 extends KinematicBody2D
 
+export var heath = 100
+
 var velocity = Vector2()
 export var destence_from_mouse = 25
-export var speed = 20
+export var speed = 120
 export var rotation_speed = 10
 var rotate = 0
 onready var muzzle = get_node("AnimatedSprite/muzzle")
 
 func _ready():
 	pass
-
+ 
 func _process(delta):
 	look_at(get_global_mouse_position())
-	position += velocity * delta * speed
+	move_and_slide(velocity * delta * speed)
 	velocity = Vector2(0,0)
 	if Input.is_action_pressed("up") and global_position.distance_to(get_global_mouse_position()) > destence_from_mouse:
 		velocity = Vector2(speed, 0).rotated(rotation)

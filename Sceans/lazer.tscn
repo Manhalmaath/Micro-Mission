@@ -15,15 +15,18 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 2, 13.5 )
 
-[node name="lazer" type="KinematicBody2D"]
+[node name="lazer" type="Node2D" groups=["bullets"]]
 script = ExtResource( 3 )
-speed = 30
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 speed_scale = 1.5
 playing = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="lazer_area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lazer_area"]
 position = Vector2( 0, -1.5 )
 shape = SubResource( 2 )
+
+[connection signal="body_entered" from="lazer_area" to="." method="_on_lazer_area_body_entered"]

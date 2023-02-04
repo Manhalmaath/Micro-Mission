@@ -11,5 +11,5 @@ dest_files=[ "res://.import/breeze-of-blood.mp3-e1fe5f7379649d7eb8b6950156bbd7af
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

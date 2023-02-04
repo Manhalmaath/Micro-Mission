@@ -2,9 +2,9 @@ extends Node2D
 
 
 func _ready():
-	$main_timer.start()
-	set_process(false)
-	$TileMap.visible = false
+	$playing.visible = false
+	$playing.set_process(false)
+	
 
 
 func _process(delta):
@@ -15,9 +15,10 @@ func _on_main_timer_timeout():
 	game_over()
 
 func game_over():
-	pass
+	print("Game Over")
 
 
 func _on_HUD_start():
-	set_process(true)
-	$TileMap.visible = true	
+	$main_timer.start()
+	$playing.visible = true
+	$playing.set_process(true)
