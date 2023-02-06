@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/WhiteBloodeCells.gd" type="Script" id=1]
 [ext_resource path="res://sound_effect/breeze-of-blood.mp3" type="AudioStream" id=2]
@@ -9,9 +9,6 @@ extents = Vector2( 16, 16 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 16, 16 )
-
-[sub_resource type="CircleShape2D" id=3]
-radius = 64.0
 
 [node name="WhiteBloodeCells" type="KinematicBody2D"]
 script = ExtResource( 1 )
@@ -30,10 +27,4 @@ shape = SubResource( 2 )
 [node name="damage" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 2 )
 
-[node name="detect_area" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="detect_area"]
-shape = SubResource( 3 )
-
 [connection signal="area_entered" from="hit_box" to="." method="_on_Area2D_area_entered"]
-[connection signal="body_entered" from="detect_area" to="." method="_on_detect_area_body_entered"]

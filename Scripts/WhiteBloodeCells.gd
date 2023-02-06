@@ -4,20 +4,21 @@ export var health = 30
 export var speed = 50
 export var player_path:NodePath
 
-var player
-
+#var player
 var motion = Vector2()
 
 var go = false
 
 func _ready():
-	player = get_node(player_path)
+#	player = get_node(player_path)
+	pass
 
 func _physics_process(delta):
-	if go:
-		print("go")
-		motion = position.direction_to(player.global_position) * speed * delta		
-	motion = move_and_slide(motion)
+	pass
+#	if go:
+#		print("go")
+#		motion = position.direction_to(player.global_position) * speed * delta		
+#	motion = move_and_slide(motion)
 
 func _process(delta):
 	if health == 0:
@@ -36,7 +37,3 @@ func get_hited(area):
 				lazer.did_damage = true
 				lazer.queue_free()
 
-
-func _on_detect_area_body_entered(body):
-	if body.name == "Player":
-		go = true

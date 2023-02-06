@@ -10,10 +10,11 @@ func _ready():
 
 
 func _process(delta):
-	if health == 0:
+	if health < 0:
 		if not you_win:
 			you_win = true
 			you_win()
+			queue_free()
 	if health == 50:
 		if not is_layer_killed:
 			$damage.play()
@@ -33,7 +34,7 @@ func get_hited(area):
 
 
 func you_win():
-	print("You Win!!!!!!!")
+	get_tree().change_scene("res://Sceans/win.tscn")
 
 
 func _on_Layer_area_area_entered(area):

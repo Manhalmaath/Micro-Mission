@@ -44,7 +44,6 @@ script = ExtResource( 1 )
 
 [node name="layer" type="AnimatedSprite" parent="Layer_area"]
 frames = SubResource( 1 )
-frame = 1
 playing = true
 
 [node name="layer_colliion" type="CollisionShape2D" parent="Layer_area"]
@@ -55,13 +54,13 @@ shape = SubResource( 4 )
 [node name="core_sprite" type="AnimatedSprite" parent="core_area"]
 frames = SubResource( 5 )
 animation = "blink"
-frame = 13
+frame = 1
 playing = true
 
 [node name="core_collision" type="CollisionShape2D" parent="core_area"]
 shape = SubResource( 3 )
 
-[node name="damage" type="AudioStreamPlayer2D" parent="."]
+[node name="damage" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

@@ -21,8 +21,8 @@ _global_script_class_icons={
 [application]
 
 config/name="Micro Mission"
-run/main_scene="res://Sceans/Level.tscn"
-config/icon="res://icon.png"
+run/main_scene="res://Sceans/GUI.tscn"
+config/icon="res://Logo.png"
 
 [display]
 
@@ -32,6 +32,8 @@ window/stretch/aspect="keep"
 [global]
 
 mouse=false
+logo=false
+icon=false
 
 [gui]
 

@@ -2,7 +2,7 @@ extends Node2D
 
 class_name Lazer
 export var damage = 10
-export var speed = 70
+export var speed = 25
 var did_damage = false
 var velocity = Vector2()
 
@@ -20,6 +20,6 @@ func set_diraction(player_rotation):
 
 func _on_lazer_area_body_entered(body):
 	if is_instance_valid(self):
-		yield(get_tree().create_timer(0.5), "timeout")
+		yield(get_tree().create_timer(0.3), "timeout")
 		queue_free()
 
